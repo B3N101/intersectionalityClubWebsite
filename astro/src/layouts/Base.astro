@@ -2,6 +2,7 @@
 import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
 
+import Navbar from "../components/ui/Navbar";
 
 export interface Props {
 	seo?: BaseHeadProps;
@@ -16,6 +17,7 @@ const { seo } = Astro.props;
     <slot name="head-bottom" />
   </head>
   <body>
+    <Navbar />
     <slot name="header" />
     <main>
       <slot />
