@@ -9,7 +9,7 @@
   },
   "devDependencies": {
     "@astrojs/sitemap": "^0.1.0",
-    "astro": "^1.2.4",
+    "astro": "^2.3.0",
     "astro-sanity": "^1.0.0",
     "date-fns": "^2.23.0",
     "dotenv": "^10.0.0",
@@ -17,6 +17,9 @@
     "prismjs": "^1.25.0"
   },
   "dependencies": {
-    "@astrojs/react": "^2.1.1"
+    "@astrojs/react": "^2.1.1",
+    "@astrojs/tailwind": "^3.1.1",
+    "@fontsource/courgette": "^4.5.9",
+    "@fontsource/inter": "^4.5.15"
   }
 }

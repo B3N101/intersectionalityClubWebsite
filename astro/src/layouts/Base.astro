@@ -1,7 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
-
+import '@fontsource/inter';
 import Navbar from "../components/ui/Navbar";
 
 export interface Props {
@@ -17,9 +17,9 @@ const { seo } = Astro.props;
     <slot name="head-bottom" />
   </head>
   <body>
-    <Navbar />
     <slot name="header" />
-    <main>
+    <main class="bg-gradient-to-br from-yellow-300 from-40% via-purple-300 h-screen">
+    <Navbar />
       <slot />
     </main>
     <slot name="footer" />
