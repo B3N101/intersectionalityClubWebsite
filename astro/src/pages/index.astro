@@ -1,39 +1,56 @@
 ---
-import Layout from '../layouts/Page.astro';
-import Container from '../components/Container.astro';
-
-
-const seo = {
-  title: "Astro Minimal Starter",
-  description: "This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support."
-}
+import Layout from "../layouts/Page.astro";
+// import Container from "../components/Container.astro";
 ---
 
-<Layout seo={seo}>
-  <Container>
-    <h1>Astro Sanity Minimal Starter</h1>
-    
-    <p>
-      If you haven't heard about <a href="https://astro.build">Astro</a> yet you're missing out. This starter repo gives you a blog website with a headless CMS setup using <a href="https://sanity.io">Sanity.io</a>.</p>
+<Layout>
+	<div class="prose mx-auto">
+		<h1>Who are we?</h1>
+		<p>
+			Founded in 2022, Intersectionality Club is a student-led organization
+			based in Middlesex School, Concord. The club hosts periodic meetings to
+			facilitate conversations about various issues and their correlations to
+			identity and experience, with the goal of providing a more nuanced outlook
+			on said issues. Part of our efforts include the Intersectionality Club
+			Column, published monthly both online and in Middlesex School’s newspaper
+			the Anvil, and our online publication Prism, with biannual issue releases.
+		</p>
 
-    <p>
-      Don't be fooled by the simplicity of this starter either. With excellent SEO built in, Astro's excellent developer environment, and performance best practices you're getting one of the best foundations for a personal blog with posts written in markdown. The reason for making such a bare bones starter in terms of styles is that it has what you need out of the box for SEO and site structure but it makes no assumptions about how you want it look and behave.
-    </p>
+		<h1>Mission Statement</h1>
+		<p>
+			Intersectionality Club aims to provide a nuanced lens through which one
+			may analyze issues correlating to identity and experience. By providing an
+			educational space where participants may engage, share, and learn, we
+			strive to spread awareness of the concept of intersectionality and its
+			impact on communities and individuals alike. In particular, the club seeks
+			to uplift and amplify historically excluded groups by pushing for
+			diversity, equity, and inclusion in both large and small communities
+			alike. Apart from working within Middlesex, it is the club’s goal to help
+			communities disadvantaged by their intersecting identities globally.
+		</p>
 
-    <p>Sometimes starters can feel like they are giving us way too much and you'll spend a day picking apart half of the code to get to the setup you actually wanted. Want to use vanilla CSS instead of Tailwind or Scss? No problem!</p>
+		<h1>What is Intersectionality?</h1>
+		<p>
+			Intersectionality is an analytical framework that recognizes the impact of
+			overlapping identities on individuals’ experiences. It takes into account
+			the nuance of these experiences, especially in regards to discrimination
+			predominantly based on race, ethnicity, nationality, class, gender, gender
+			identity, sexual orientation, ability, religion, age, weight, physical
+			appearance, and more. Because of the combined effects of these identities,
+			individuals must confront different degrees of oppression and privilege in
+			their lives. However, it is important to note that intersectionality is
+			not just about oppression and privilege; it encompasses everything in an
+			individual’s identity that makes them who they are.
+			<br />
+			The idea of intersectionality has long been in existence, but the term was
+			not officially coined until 1989, when scholar and black feminist Kimberlé
+			Crenshaw pointed out the varying forms of discrimination individuals with overlapping
+			identities faced.
+		</p>
 
-    <h2>Features</h2>
-    <ul>
-      <li>A customizable headless CMS with <a href="https://sanity.io">Sanity.io</a></li>
-      <li>Excellent SEO Built In</li>
-      <li>Open Graph Tags (Twitter, Facebook, etc.)</li>
-      <li>User Declared Canonical URLs</li>
-      <li>RSS Feed</li>
-      <li>XML Sitemap</li>
-      <li>Robots.txt</li>
-      <li>JSON LD Schema</li>
-    </ul>
-
-    <a href="/blog">Blog →</a>
-  </Container>
+		<p>
+			Read more about the concept of intersectionality here: (link column
+			article #1)
+		</p>
+	</div>
 </Layout>

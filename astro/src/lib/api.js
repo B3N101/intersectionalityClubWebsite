@@ -6,6 +6,12 @@ export async function getAllPosts() {
   return data;
 }
 
+export async function getAllPostsWithAuthor() {
+  const query = `*[_type == 'post']{"author": author->{name}, ...} | order(publishedAt desc)`;
+  const data = await useSanityClient().fetch(query);
+  return data;
+}
+
 export async function getAllCategoriesWithPosts() {
   const query = `*[_type == 'category']{"posts": *[_type == "post" && references(^._id)] | order(publishedAt desc), ...}`;
   const data = await useSanityClient().fetch(query);

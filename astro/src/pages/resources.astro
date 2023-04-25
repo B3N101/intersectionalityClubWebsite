@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Page.astro";
+import Container from "../components/Container.astro";
+
+const seo = {
+	title: "Intersectionality Club | Resources",
+	description: "Resources in relation to intersectionality",
+};
+
+const introductionToIntersectionalityLinks = ["https://www.ted.com/talks/kimberle_crenshaw_the_urgency_of_intersectionality",
+    "https://library.law.howard.edu/civilrightshistory/women/intersectionality",
+    "https://www.womankind.org.uk/intersectionality-101-what-is-it-and-why-is-it-important/",
+    "https://www.youtube.com/watch?v=ViDtnfQ9FHc",
+    "https://www.youtube.com/watch?v=bzQkVfO9ToQ"]
+
+const typesOfIntersetionalityLinks  = ["https://www.liebertpub.com/doi/10.1089/trgh.2019.0039", "https://time.com/5952819/history-anti-asian-racism-misogyny/", "https://www.nytimes.com/2018/09/30/us/the-effect-of-intersectionality-in-the-workplace.html",
+"https://cloudburstgroup.com/2021/11/15/intersectionality-a-vital-tool-in-advancing-lgbtq-rights/", "https://www.unicefusa.org/stories/case-intersectionality-supporting-lgbtq-youth-amidst-covid-19"]
+
+---
+
+<Layout seo={seo}>
+	<div class="prose mx-auto">
+		<h1>Resources for intersectionality</h1>
+		<p class="italic">
+			Intersectionality is a broad concept encompassing many different fields of
+			study and exploration. Please note that this page is meant to be an
+			introduction — or rather, a springboard — into topics of
+			intersectionality, not an all-inclusive guide into everything there is to
+			know about the subject.
+		</p>
+
+		<h2>An introduction to intersectionality</h2>
+		{introductionToIntersectionalityLinks.map((link) => (
+            <li><a href={link}>{link}</a></li>
+        ))
+        }
+
+		<h2>Various kinds of intersectionality</h2>
+        {typesOfIntersetionalityLinks.map((link) => (
+            <li><a href={link}>{link}</a></li>
+        ))
+        }
+
+
+
+		<h2>Books on intersectionality</h2>
+		<li>On Intersectionality: Essential Writings by Kimberlé Crenshaw</li>
+		<li>The Trouble with White Women by Kyla Schuller</li>
+		<li>
+			White Tears/Brown Scars: How White Feminism Betrays Women of Color by Ruby
+			Hamad
+		</li>
+		<li>The Oxford Handbook of Feminist Theory</li>
+	</div>
+</Layout>

@@ -1,0 +1,89 @@
+---
+// Component Imports
+import Layout from "../../layouts/Page.astro";
+import BlogPostPreview from "../../components/BlogPostPreview.astro";
+
+import { getAllPosts, getAllPostsWithAuthor } from "../../lib/api.js";
+
+import Container from "../../components/Container.astro";
+
+const seo = {
+	title: "Example Blog",
+	description:
+		"This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support.",
+};
+
+const allPostData = await getAllPosts();
+const allAuthorData = await getAllPostsWithAuthor();
+
+const allPosts = allPostData.map(post => {
+  const author = allAuthorData.find(author => author.id === post.author);
+  return {
+    ...post,
+    author,
+  };
+});
+---
+
+<Layout seo={seo}>
+	<div class="prose mx-auto">
+		<h1>About the publication</h1>
+		<p>
+			<strong class="text-xl">PRISM</strong> is Intersectionality Club’s online publication consisting
+			of student works on identity and experience. This publication acts as a platform
+			for the amplification of diverse voices, and as a medium through which students
+			can share their individual stories.
+			<br />
+			We decided on the name Prism because we believe such an object reflects the
+			fundamental concept of intersectionality. Just as the unique qualities of a
+			prism come from its overlap of colors within, every individual’s identities
+			and experiences intersect and affect their story. The name is also inspired
+			by civil rights advocate Kimberlé Crenshaw’s quote that intersectionality is
+			a "prism, for seeing the way in which various forms of inequality often operate
+			together and exacerbate each other.”
+		</p>
+
+		<h1>Submission Guidelines</h1>
+		<p>
+			We recognize that identities intersect and are fundamentally
+			interconnected, making every individual different in their own unique way.
+			We would like to highlight individual experiences and provide an online
+			platform with which everyone can share their voices, opinions, and
+			perspectives. In order to make using this platform a comfortable
+			experience for everyone, here are the guidelines for submission:
+			<ol>
+				<li>
+					Submissions may take any form: painting, photography, short films,
+					personal narrative, poetry, journalistic articles, etc.
+				</li>
+				<li>
+					For writing pieces, you may use first person, because it is your own
+					narrative!
+				</li>
+				<li>
+					Word limit: Literary works should not exceed the 3000 word limit.
+				</li>
+				<li>
+					Do not appropriate content that is not yours. In other words, use your
+					own experience and ideas rather than resorting to plagiarism.
+				</li>
+				<li>
+					Give your piece a title---it will draw the attention of the
+					reader/viewer!
+				</li>
+				<li>
+					If you choose to remain anonymous, please let the editors know your
+					preference.
+				</li>
+			</ol>
+		</p>
+	</div>
+
+	<Container>
+		<article class="blog-page-content__article">
+			<section class="postlist">
+				{allPostData.map(post => <BlogPostPreview post={post} />)}
+			</section>
+		</article>
+	</Container>
+</Layout>

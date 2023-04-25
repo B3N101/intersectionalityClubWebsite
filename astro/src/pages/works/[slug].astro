@@ -34,7 +34,7 @@ const seo = {
 <Layout seo={seo}>
  {post.categoryData && <ul>
     {post.categoryData.map(category => (
-    <li><a href={`/blog/category/${category.slug.current}`}>{category.title}</a></li>
+    <li><a href={`/works/category/${category.slug.current}`}>{category.title}</a></li>
     ))}
   </ul>}
   <BlogPost post={post} />
