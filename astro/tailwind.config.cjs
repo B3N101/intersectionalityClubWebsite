@@ -9,6 +9,9 @@ module.exports = {
 				courgette: ["Courgette"],
 				inter: ["Inter"],
 			},
+			backgroundColor: {
+				'background': "url(/public/background.jpg)",
+			},
 		},
 	},
 	plugins: [],

@@ -3,10 +3,10 @@ import "@fontsource/courgette";
 export default function Navbar() {
 	return (
 		<nav>
-			<h1 className="text-center  font-courgette text-2xl">
+			<h1 className="text-center font-courgette text-3xl">
 				Intersectionality Club
 			</h1>
-			<ul className="flex justify-center font-inter">
+			<ul className="flex justify-center">
 				<li className="mx-2">
 					<a href="/blog">Home</a>
 				</li>

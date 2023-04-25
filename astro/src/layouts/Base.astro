@@ -16,9 +16,9 @@ const { seo } = Astro.props;
     <BaseHead {...seo} />
     <slot name="head-bottom" />
   </head>
-  <body>
+  <body class="font-inter">
     <slot name="header" />
-    <main class="bg-gradient-to-br from-yellow-300 from-40% via-purple-300 h-screen">
+    <main class="bg-gradient-to-br from-yellow-300 from-40% via-purple-300 min-h-screen">
     <Navbar />
       <slot />
     </main>
