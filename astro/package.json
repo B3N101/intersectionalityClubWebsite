@@ -1,5 +1,5 @@
 {
-  "name": "astro-sanity-minimal-starter",
+  "name": "intersectionality-club-site",
   "version": "v3.2.0",
   "private": false,
   "scripts": {
@@ -10,15 +10,16 @@
   "devDependencies": {
     "@astrojs/sitemap": "^0.1.0",
     "@tailwindcss/typography": "^0.5.9",
-    "astro": "^2.3.0",
+    "astro": "^3.1.0",
     "date-fns": "^2.23.0",
     "dotenv": "^10.0.0",
     "lit": "^2.3.1",
-    "prismjs": "^1.25.0"
+    "prismjs": "^1.25.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@astrojs/react": "^2.1.1",
-    "@astrojs/tailwind": "^3.1.1",
+    "@astrojs/react": "^3.0.2",
+    "@astrojs/tailwind": "^5.0.0",
     "@fontsource/courgette": "^4.5.9",
     "@fontsource/inter": "^4.5.15"
   }

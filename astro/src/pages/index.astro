@@ -1,12 +1,13 @@
 ---
 import Layout from "../layouts/Page.astro";
-import logo from "../inter-header.jpg";
+import { Image } from 'astro:assets';
+import myHeader from "../inter-header.jpg";
 // import Container from "../components/Container.astro";
 ---
 
 <Layout>
  	<div class="flex justify-center">
-        <img src={logo} alt="Intersectionality Club logo" class="w-3/5 mb-4"/>
+        <Image src={myHeader} alt="Intersectionality Club logo" class="w-3/5 mb-4"/>
       </div>
 	<div class="mx-auto w-3/5">
 		<h1 class="text-4xl text-red-600 font-black my-4">Who are we?</h1>
