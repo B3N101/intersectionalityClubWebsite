@@ -1,12 +1,16 @@
 ---
 import Layout from "../layouts/Page.astro";
+import logo from "../inter-header.jpg";
 // import Container from "../components/Container.astro";
 ---
 
 <Layout>
-	<div class="prose mx-auto">
-		<h1>Who are we?</h1>
-		<p>
+ 	<div class="flex justify-center">
+        <img src={logo} alt="Intersectionality Club logo" class="w-3/5 mb-4"/>
+      </div>
+	<div class="mx-auto w-3/5">
+		<h1 class="text-4xl text-red-600 font-black my-4">Who are we?</h1>
+		<p class="text-lg text-justify">
 			Founded in 2022, Intersectionality Club is a student-led organization
 			based in Middlesex School, Concord. The club hosts periodic meetings to
 			facilitate conversations about various issues and their correlations to
@@ -16,8 +20,8 @@ import Layout from "../layouts/Page.astro";
 			the Anvil, and our online publication Prism, with biannual issue releases.
 		</p>
 
-		<h1>Mission Statement</h1>
-		<p>
+		<h1 class="text-4xl text-blue-600 font-black text-right my-4">Mission Statement</h1>
+		<p class="text-lg text-justify">
 			Intersectionality Club aims to provide a nuanced lens through which one
 			may analyze issues correlating to identity and experience. By providing an
 			educational space where participants may engage, share, and learn, we
@@ -29,8 +33,8 @@ import Layout from "../layouts/Page.astro";
 			communities disadvantaged by their intersecting identities globally.
 		</p>
 
-		<h1>What is Intersectionality?</h1>
-		<p>
+		<h1 class="text-4xl text-red-600 font-black my-4">What is Intersectionality?</h1>
+		<p class="text-lg text-justify">
 			Intersectionality is an analytical framework that recognizes the impact of
 			overlapping identities on individuals’ experiences. It takes into account
 			the nuance of these experiences, especially in regards to discrimination
@@ -41,16 +45,12 @@ import Layout from "../layouts/Page.astro";
 			their lives. However, it is important to note that intersectionality is
 			not just about oppression and privilege; it encompasses everything in an
 			individual’s identity that makes them who they are.
-			<br />
+		</p>			
+		<p class="text-lg text-justify mt-4">
 			The idea of intersectionality has long been in existence, but the term was
 			not officially coined until 1989, when scholar and black feminist Kimberlé
 			Crenshaw pointed out the varying forms of discrimination individuals with overlapping
 			identities faced.
-		</p>
-
-		<p>
-			Read more about the concept of intersectionality here: (link column
-			article #1)
 		</p>
 	</div>
 </Layout>

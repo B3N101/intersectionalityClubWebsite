@@ -27,7 +27,7 @@ export default function Navbar() {
 				</li>
 			</ul>
 			{/* Vertical bar */}
-			<div className="border border-black h-0.5 w-full my-2"></div>
+			<div className="border border-black h-0.5 w-full my-2"/>
 
 		</nav>
 	);

@@ -1,39 +1,25 @@
 ---
 // Component Imports
-import Layout from "../../layouts/Page.astro";
-import BlogPostPreview from "../../components/BlogPostPreview.astro";
-
-import { getAllPosts, getAllPostsWithAuthor } from "../../lib/api.js";
-
-import Container from "../../components/Container.astro";
+import Layout from "../layouts/Page.astro";
 
 const seo = {
-	title: "Example Blog",
+	title: "Intersectionality Club | Prism",
 	description:
 		"This is a starter repo for an blog built with Astro including open graph tags, canonical urls, RSS, sitemap support.",
 };
 
-const allPostData = await getAllPosts();
-const allAuthorData = await getAllPostsWithAuthor();
-
-const allPosts = allPostData.map(post => {
-  const author = allAuthorData.find(author => author.id === post.author);
-  return {
-    ...post,
-    author,
-  };
-});
 ---
 
 <Layout seo={seo}>
-	<div class="prose mx-auto">
-		<h1>About the publication</h1>
-		<p>
-			<strong class="text-xl">PRISM</strong> is Intersectionality Club’s online publication consisting
+	<div class="mx-auto w-3/5">
+		<h1 class="text-4xl text-red-600 font-black my-2">About the publication</h1>
+		<p class="text-lg text-justify">
+			<strong class="text-xl text-blue-600">PRISM</strong> is Intersectionality Club’s online publication consisting
 			of student works on identity and experience. This publication acts as a platform
 			for the amplification of diverse voices, and as a medium through which students
 			can share their individual stories.
-			<br />
+		</p>
+		<p class="text-lg text-justify mt-2">
 			We decided on the name Prism because we believe such an object reflects the
 			fundamental concept of intersectionality. Just as the unique qualities of a
 			prism come from its overlap of colors within, every individual’s identities
@@ -43,15 +29,15 @@ const allPosts = allPostData.map(post => {
 			together and exacerbate each other.”
 		</p>
 
-		<h1>Submission Guidelines</h1>
-		<p>
+		<h1 class="text-4xl text-red-600 font-black my-2">Submission Guidelines</h1>
+		<p class="text-lg text-justify">
 			We recognize that identities intersect and are fundamentally
 			interconnected, making every individual different in their own unique way.
 			We would like to highlight individual experiences and provide an online
 			platform with which everyone can share their voices, opinions, and
 			perspectives. In order to make using this platform a comfortable
 			experience for everyone, here are the guidelines for submission:
-			<ol>
+			<ol class="indent-4 text-base">
 				<li>
 					Submissions may take any form: painting, photography, short films,
 					personal narrative, poetry, journalistic articles, etc.
@@ -78,12 +64,4 @@ const allPosts = allPostData.map(post => {
 			</ol>
 		</p>
 	</div>
-
-	<Container>
-		<article class="blog-page-content__article">
-			<section class="postlist">
-				{allPostData.map(post => <BlogPostPreview post={post} />)}
-			</section>
-		</article>
-	</Container>
 </Layout>

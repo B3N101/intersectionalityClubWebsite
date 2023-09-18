@@ -19,9 +19,9 @@ const typesOfIntersetionalityLinks  = ["https://www.liebertpub.com/doi/10.1089/t
 ---
 
 <Layout seo={seo}>
-	<div class="prose mx-auto">
-		<h1>Resources for intersectionality</h1>
-		<p class="italic">
+	<div class="mx-auto w-3/5">
+		<h1 class="text-4xl text-red-600 font-black my-2">Resources for intersectionality</h1>
+		<p class="text-lg text-justify italic">
 			Intersectionality is a broad concept encompassing many different fields of
 			study and exploration. Please note that this page is meant to be an
 			introduction — or rather, a springboard — into topics of
@@ -29,21 +29,19 @@ const typesOfIntersetionalityLinks  = ["https://www.liebertpub.com/doi/10.1089/t
 			know about the subject.
 		</p>
 
-		<h2>An introduction to intersectionality</h2>
+		<h2 class="text-2xl text-red-600 font-black my-2">An introduction to intersectionality</h2>
 		{introductionToIntersectionalityLinks.map((link) => (
-            <li><a href={link}>{link}</a></li>
+            <li class="text-blue-600 hover:underline"><a href={link}>{link}</a></li>
         ))
         }
 
-		<h2>Various kinds of intersectionality</h2>
+		<h2 class="text-2xl text-red-600 font-black my-2">Various kinds of intersectionality</h2>
         {typesOfIntersetionalityLinks.map((link) => (
-            <li><a href={link}>{link}</a></li>
+            <li class="text-blue-600  hover:underline"><a href={link}>{link}</a></li>
         ))
         }
 
-
-
-		<h2>Books on intersectionality</h2>
+		<h2 class="text-2xl text-red-600 font-black my-2">Books on intersectionality</h2>
 		<li>On Intersectionality: Essential Writings by Kimberlé Crenshaw</li>
 		<li>The Trouble with White Women by Kyla Schuller</li>
 		<li>
