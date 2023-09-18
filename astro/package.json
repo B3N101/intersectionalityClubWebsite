@@ -21,6 +21,7 @@
     "@astrojs/react": "^3.0.2",
     "@astrojs/tailwind": "^5.0.0",
     "@fontsource/courgette": "^4.5.9",
-    "@fontsource/inter": "^4.5.15"
+    "@fontsource/inter": "^4.5.15",
+    "@vercel/analytics": "^1.0.2"
   }
 }
