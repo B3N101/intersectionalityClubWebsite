@@ -2,6 +2,11 @@
 import Layout from "../layouts/Page.astro";
 import Container from "../components/Container.astro";
 
+import { Image } from "astro:assets";
+import Audrey from "../Audrey.png";
+import Ema from "../Ema.png";
+import Harrison from "../Harrison.png";
+
 const seo = {
 	title: "Intersectionality Club | Resources",
 	description: "Resources in relation to intersectionality",
@@ -9,37 +14,49 @@ const seo = {
 ---
 
 <Layout seo={seo}>
-	<div class="mx-auto w-3/5">
+	<div class="mx-auto w-3/5 grid gap-2">
 		<h1 class="text-4xl text-red-600 font-black my-2">Get involved!</h1>
 
 		<h2 class="text-2xl text-blue-600 font-black my-2">Our team members</h2>
 
-		<p class="text-lg text-justify mt-4">
-			<span class="italic">Audrey Tang (founder and head):</span> Audrey is an
-			international student at Middlesex School from Hong Kong. As a
-			neurodivergent woman with ADHD, she is very interested in the impact of
-			DEI, intersectionality, and politics on both a communal and individual
-			level, and incorporates that passion into her works as a writer, singer,
-			dancer, and actress.
-		</p>
+		<!-- Q: Create a 2 column flexbox grid using tailind
+			A; https://tailwindcss.com/docs/flexbox-grids#2-column -->
+		<div class="grid md:grid-cols-2 gap-4">
+			<p class="text-lg text-justify mt-4">
+				<span class="italic font-black">Audrey Tang (founder and head):</span> Audrey is an
+				international student at Middlesex School from Hong Kong. As a
+				neurodivergent woman with ADHD, she is very interested in the impact of
+				DEI, intersectionality, and politics on both a communal and individual
+				level, and incorporates that passion into her works as a writer, singer,
+				dancer, and actress.
+			</p>
+			<Image src={Audrey} alt="Audrey Tang" class="w-3/4" />
+		</div>
 
-		<p class="text-lg text-justify mt-4">
-			<span class="italic">Ema Edwards (head):</span> Ema is an open-minded,
-			enthusiastic Senior at Middlesex. Her home is San Francisco, California,
-			but she grew up in Chicago, Illinois and for much of her life, she
-			considered Japan her home. Ema is passionate about psychology and
-			thoroughly enjoys literature, often engaging in complex conversations
-			about any topic with her close friends.
-		</p>
+		<div class="grid md:grid-cols-2 gap-4">
+			<p class="text-lg text-justify mt-4">
+				<span class="italic font-black">Ema Edwards (head):</span> Ema is an open-minded,
+				enthusiastic Senior at Middlesex. Her home is San Francisco, California,
+				but she grew up in Chicago, Illinois and for much of her life, she
+				considered Japan her home. Ema is passionate about psychology and
+				thoroughly enjoys literature, often engaging in complex conversations
+				about any topic with her close friends.
+			</p>
+			<Image src={Ema} alt="Ema Edwards" class="w-3/4" />
+		</div>
 
-		<p class="text-lg text-justify mt-4">
-			<span class="italic">Harrison Huang (publications manager):</span>
-			Harrison is a junior at Middlesex. Besides being an boarding international
-			student from Nanjing, China, he is also a pianist, painter, skier, and
-			trilingual (Mandarin, English, French). Though an introvert, Harrison
-			deeply values connections with other people and understands people's
-			feelings. As an INFJ, he can be both a realist and an idealist, emotional
-			and logical, and playful and thoughtful.
-		</p>
+		<div class="grid md:grid-cols-2 gap-4">
+			<p class="text-lg text-justify mt-4">
+				<span class="italic font-black">Harrison Huang (publications manager):</span>
+				Harrison is a senior at Middlesex. Besides being an boarding
+				international student from Nanjing, China, he is also a pianist,
+				painter, skier, and trilingual (Mandarin, English, French). Though an
+				introvert, Harrison deeply values connections with other people and
+				understands people's feelings. As an INFJ, he can be both a realist and
+				an idealist, emotional and logical, and playful and thoughtful.
+			</p>
+
+			<Image src={Harrison} alt="Harrison Huang" class="w-3/4" />
+		</div>
 	</div>
 </Layout>
