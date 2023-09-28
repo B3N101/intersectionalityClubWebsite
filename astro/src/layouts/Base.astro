@@ -1,8 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import type { Props as BaseHeadProps } from '../components/BaseHead.astro';
-import '@fontsource/inter';
-import { Image } from 'astro:assets';
+import type { Props as BaseHeadProps } from "../components/BaseHead.astro";
+import "@fontsource/inter";
+import { Image } from "astro:assets";
 import myLogo from "../inter-logo.svg";
 
 export interface Props {
@@ -13,52 +13,57 @@ const { seo } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <BaseHead {...seo} />
-	<script>
-  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-</script>
-<script defer src="/_vercel/insights/script.js"></script>
-    <slot name="head-bottom" />
-  </head>
-  <body class="font-inter">
-    <slot name="header" />
-    <main class="bg-white min-h-screen px-2 pb-10">
-    <>
-    <nav class="mb-6">
-      {/* Logo */}
-      <div class="flex justify-center">
-        <Image src={myLogo} alt="Intersectionality Club logo" class="w-9/12 md:w-1/3 "/>
-      </div>
+	<head>
+		<BaseHead {...seo} />
+		<script>
+			window.va =
+				window.va ||
+				function () {
+					(window.vaq = window.vaq || []).push(arguments);
+				};
+		</script>
+		<script defer src="/_vercel/insights/script.js"></script>
+		<slot name="head-bottom" />
+	</head>
+	<body class="font-inter">
+		<slot name="header" />
+		<main class="bg-white min-h-screen px-2 pb-10">
+			<>
+				<nav class="mb-6">
+					{/* Logo */}
+					<div class="flex justify-center">
+						<Image
+							src={myLogo}
+							alt="Intersectionality Club logo"
+							class="w-9/12 md:w-1/3"
+						/>
+					</div>
 
-			<div class="border border-black h-0.5 w-full my-2"/>
-      
-			<ul class="flex justify-center text-lg">
-				<li class="mx-2">
-					<a href="/">Home</a>
-				</li>
-				<li class="mx-2">
-					<a href="/works">
-						Works
-					</a>
-				</li>
-				<li class="mx-2">
-					<a href="/resources">
-						Resources
-					</a>
-				</li>
-				<li class="mx-2">
-					<a href="/get-involved">
-						Get involved
-					</a>
-				</li>
-			</ul>
-			{/* Vertical bar */}
-			<div class="border border-black h-0.5 w-full my-2"/>
-		</nav>
-    </>
-      <slot />
-    </main>
-    <slot name="footer" />
-  </body>
+					<div class="border border-black h-0.5 w-full my-2"></div>
+
+					<ul class="flex justify-center text-lg">
+						<li class="mx-2">
+							<a href="/">Home</a>
+						</li>
+						<li class="mx-2">
+							<a href="/works"> Works</a>
+						</li>
+						<li class="mx-2">
+							<a href="/resources"> Resources</a>
+						</li>
+						<li class="mx-2">
+							<a href="/get-involved"> Get involved</a>
+						</li>
+					</ul>
+					{/* Vertical bar */}
+					<div class="border border-black h-0.5 w-full my-2"></div>
+				</nav>
+			</>
+			<slot />
+		</main>
+		<footer class="text-center my-6 text-lg">
+			<hr class="my-3" />
+			Website made by Ben Feuer | <a href="mailto:intersectionalityclub@gmail.com">Contact Intersectionality Club: intersectionalityclub@gmail.com</a>
+		</footer>
+	</body>
 </html>

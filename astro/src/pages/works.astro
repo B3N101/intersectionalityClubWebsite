@@ -2,7 +2,18 @@
 // Component Imports
 import Layout from "../layouts/Page.astro";
 import { Image } from "astro:assets";
-import myHeader from "../prism-header.png";
+import myHeader from "../prism.png";
+import i1 from "../i1.jpg";
+import i2 from "../i2.jpg";
+import i3 from "../i3.jpg";
+import i4 from "../i4.jpg";
+import s1 from "../s1.jpg";
+import s2 from "../s2.jpg";
+import s3 from "../s3.jpg";
+import s4 from "../s4.jpg";
+import s5 from "../s5.jpg";
+
+import ema from "../Ema.jpeg";
 
 const seo = {
 	title: "Intersectionality Club | Prism",
@@ -11,19 +22,209 @@ const seo = {
 ---
 
 <Layout seo={seo}>
+	<div class="menu">
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#AAPI">AAPI Month by Lee Chalomtiarana</a
+		>
+		<a
+			class="menuItem flex sm:text-2xl justify-center font-white mx-auto"
+			href="#quiet">the quiet by Audrey Tang</a
+		>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#luca">Self Portrait by Luca Raffa</a
+		>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#luca1">Antonio Ometeotl by Luca Raffa</a
+		>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#luca2">Benjamin Canizares by Luca Raffa</a
+		>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#luca3">Leonardo Vargas by Luca Raffa</a
+		>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#luca4">Therese Ejiofor by Luca Raffa</a
+		>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#art"
+		>
+			The Art of Language by Mahika Varma
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#testament"
+		>
+			testament by Meagan Tam
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#whiteman1"
+		>
+			The Daily Allowance Of White Men by Lee Chaloemtiarana
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#whiteman2"
+			>the mysterious case of the white man by Lee Chaloemtiarana
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#ema"
+		>
+			Glazed by Ema Edwards
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#anonymous"
+		>
+			Dear Diary (anonymous)
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#protests"
+		>
+			premature protests by Lee Chaloemtiarana
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#crane"
+		>
+			Red-crowned crane by Audrey Tang
+		</a>
+		<a
+			class="menuItem flex text-lg sm:text-xl md:text-2xl justify-center font-white mx-auto"
+			href="#cantoneese"
+		>
+			Cantoneese by Audrey Tang</a
+		>
+	</div>
+
+	<button
+		class="hamburger my-8 fixed top-3/4 left-6 bg-[#77f] p-3 text-sm font-bold tracking-wide rounded-full focus:outline-none"
+	>
+		<!-- material icons https://material.io/resources/icons/ -->
+		<i class="menuIcon">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				class="w-6 h-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+			</svg>
+		</i>
+
+		<i class="closeIcon">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="2"
+				stroke="currentColor"
+				class="w-6 h-6"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</i>
+	</button>
+
+	<script>
+		const menu = document.querySelector(".menu");
+		const menuItems = document.querySelectorAll(".menuItem");
+		const hamburger = document.querySelector(".hamburger");
+		const closeIcon = document.querySelector(".closeIcon");
+		const menuIcon = document.querySelector(".menuIcon");
+
+		function toggleMenu() {
+			if (menu.classList.contains("showMenu")) {
+				menu.classList.remove("showMenu");
+				closeIcon.style.display = "none";
+				menuIcon.style.display = "block";
+			} else {
+				menu.classList.add("showMenu");
+				closeIcon.style.display = "block";
+				menuIcon.style.display = "none";
+			}
+		}
+
+		hamburger.addEventListener("click", toggleMenu);
+
+		menuItems.forEach(function (menuItem) {
+			menuItem.addEventListener("click", toggleMenu);
+		});
+	</script>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		.menuItem:hover {
+			text-decoration: underline;
+		}
+
+		.hamburger {
+			z-index: 100;
+		}
+
+		.closeIcon {
+			display: none;
+		}
+
+		.menuItem {
+			margin-top: 0.5rem;
+		}
+
+		.menu {
+			position: fixed;
+			transform: translateY(-100%);
+			transition: transform 0.2s;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 99;
+			background: black;
+			color: white;
+			list-style: none;
+			padding-top: 4rem;
+		}
+
+		.showMenu {
+			transform: translateY(0);
+		}
+	</style>
+
 	<div class="flex justify-center">
 		<Image
 			src={myHeader}
 			alt="Intersectionality Club logo"
-			class="pb-4 w-5/12"
+			class="pb-4 w-7/12"
 		/>
 	</div>
 	<div class="flex justify-center">
-	<button
-		class="modal-open bg-transparent border border-gray-500 hover:border-blue-600 text-gray-500 hover:text-blue-600 font-bold py-2 px-2 rounded-full"
-		>About the publication & Submission Guidlines
-	</button>
-</div>
+		<button
+			class="modal-open bg-transparent border border-gray-500 hover:border-blue-600 text-gray-500 hover:text-blue-600 font-bold py-2 px-2 rounded-full"
+			>About the publication & Submission Guidlines
+		</button>
+	</div>
 
 	<div class="mx-auto">
 		<style>
@@ -139,12 +340,7 @@ const seo = {
 						</p>
 					</div>
 
-					<!--Footer-->
 					<div class="flex justify-end pt-2">
-						<button
-							class="px-4 bg-transparent p-3 rounded-lg text-indigo-500 hover:bg-gray-100 hover:text-indigo-400 mr-2"
-							>Action</button
-						>
 						<button
 							class="modal-close px-4 bg-indigo-500 p-3 rounded-lg text-white hover:bg-indigo-400"
 							>Close</button
@@ -194,63 +390,11 @@ const seo = {
 		</script>
 	</div>
 
-	<!-- <div class="mx-auto w-3/5">
-		<h1 class="text-4xl text-red-600 font-black py-6">About the publication</h1>
-		<p class="text-lg text-justify">
-			<strong class="text-xl text-blue-600">PRISM</strong> is Intersectionality Club’s online publication consisting
-			of student works on identity and experience. This publication acts as a platform
-			for the amplification of diverse voices, and as a medium through which students
-			can share their individual stories.
-		</p>
-		<p class="text-lg text-justify mt-2">
-			We decided on the name Prism because we believe such an object reflects the
-			fundamental concept of intersectionality. Just as the unique qualities of a
-			prism come from its overlap of colors within, every individual’s identities
-			and experiences intersect and affect their story. The name is also inspired
-			by civil rights advocate Kimberlé Crenshaw’s quote that intersectionality is
-			a "prism, for seeing the way in which various forms of inequality often operate
-			together and exacerbate each other.”
-		</p>
-
-		<h1 class="text-4xl text-red-600 font-black py-2">Submission Guidelines</h1>
-		<p class="text-lg text-justify">
-			We recognize that identities intersect and are fundamentally
-			interconnected, making every individual different in their own unique way.
-			We would like to highlight individual experiences and provide an online
-			platform with which everyone can share their voices, opinions, and
-			perspectives. In order to make using this platform a comfortable
-			experience for everyone, here are the guidelines for submission:
-			<ol class="indent-4 text-base">
-				<li>
-					Submissions may take any form: painting, photography, short films,
-					personal narrative, poetry, journalistic articles, etc.
-				</li>
-				<li>
-					For writing pieces, you may use first person, because it is your own
-					narrative!
-				</li>
-				<li>
-					Word limit: Literary works should not exceed the 3000 word limit.
-				</li>
-				<li>
-					Do not appropriate content that is not yours. In other words, use your
-					own experience and ideas rather than resorting to plagiarism.
-				</li>
-				<li>
-					Give your piece a title---it will draw the attention of the
-					reader/viewer!
-				</li>
-				<li>
-					If you choose to remain anonymous, please let the editors know your
-					preference.
-				</li>
-			</ol>
-		</p>
-	</div> -->
-
 	<div class="block">
 		<div id="content wrapper" class="mx-auto w-3/5">
-			<h1 class="text-4xl font-black py-6">AAPI Month by Lee Chalomtiarana</h1>
+			<h1 id="AAPI" class="text-4xl font-black py-6">
+				AAPI Month by Lee Chalomtiarana
+			</h1>
 			<p class="text-base">
 				4.26.22
 				<br />
@@ -288,7 +432,9 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">the quiet by Audrey Tang</h1>
+			<h1 id="quiet" class="text-4xl font-black py-6">
+				the quiet by Audrey Tang
+			</h1>
 			<p class="text-base">
 				11:54pm<br />
 				<br />
@@ -562,13 +708,52 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">Self Portrait by Luca Raffa</h1>
-			<p class="text-base">Images to be inserted</p>
+			<h1 id="luca" class="text-4xl font-black py-6">
+				Self Portrait by Luca Raffa
+			</h1>
+			<Image src={s1} alt="" class="mx-auto pb-4 w-3/4" />
+			<Image src={s2} alt="" class="mx-auto pb-4 w-3/4" />
+			<Image src={s3} alt="" class="mx-auto pb-4 w-3/4" />
+			<Image src={s4} alt="" class="mx-auto pb-4 w-3/4" />
+			<Image src={s5} alt="" class="mx-auto pb-4 w-3/4" />
 
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">
+			<h1 id="luca1" class="text-4xl font-black py-6">
+				Antonio Ometeotl by Luca Raffa
+			</h1>
+
+			<Image src={i1} alt="" class="mx-auto pb-4 w-1/2" />
+
+			<hr class="my-8" />
+
+			<h1 id="luca2" class="text-4xl font-black py-6">
+				Benjamin Canizares by Luca Raffa
+			</h1>
+
+			<Image src={i2} alt="" class="mx-auto pb-4 w-1/2" />
+
+			<hr class="my-8" />
+
+			<h1 id="luca3" class="text-4xl font-black py-6">
+				Leonardo Vargas by Luca Raffa
+			</h1>
+
+			<Image src={i3} alt="" class="mx-auto pb-4 w-1/2" />
+
+			<hr class="my-8" />
+
+			<h1 id="luca4" class="text-4xl font-black py-6">
+				Therese Ejiofor by Luca Raffa
+			</h1>
+
+			<Image src={i4} alt="" class="mx-auto pb-4 w-1/2" />
+
+			<!-- Horizontal line -->
+			<hr class="my-8" />
+
+			<h1 id="art" class="text-4xl font-black py-6">
 				The Art of Language by Mahika Varma
 			</h1>
 			<p class="text-base">
@@ -578,6 +763,7 @@ const seo = {
 				employability, like French in Canada. Wanting to know a language other
 				than English is common because most feel that English is plain and
 				uninteresting. Everyone knows English, right?<br />
+				<br />
 				 I often hear: &ldquo;You know French? That is crazy!&rdquo; and I
 				appreciate the admiration, but I notice that this is not the reaction I
 				receive when someone finds out I speak Hindi. I am expected to know
@@ -585,6 +771,7 @@ const seo = {
 				therefore, unimpressive. Never mind I was born in Canada and went to an
 				English-speaking school. Never mind I had to learn Hindi for six hours
 				every Saturday. It is just not impressive.<br />
+				<br />
 				 People often forget that understanding any language is a feat because
 				they are so enamoured with Western European dialects. When a French
 				immigrant knows French, they are treated like a God. When a British
@@ -594,7 +781,7 @@ const seo = {
 				hypocrisy. When a Mexican immigrant speaks Spanish, or a Chinese
 				immigrant speaks accented English, we, as a society, treat them
 				differently. Now, our gut reaction may be to deny this, but it is true.<br
-				/>
+				/><br />
 				 In 2018, the Pew Research Center found that 38% of Hispanic or Latino
 				people in America &ldquo;have recently experienced one of four incidents
 				&ndash; being called offensive names, being told to go back to their
@@ -610,7 +797,7 @@ const seo = {
 				made about them. Speaking Chinese-accented English simply implied that
 				the candidate was uneducated and not fit for the job, whereas speaking
 				British-accented English did not hinder an applicant&rsquo;s chances.<br
-				/>
+				/><br />
 				 Why is it that we hate &ldquo;foreign&rdquo;-accented English so much?
 				Some argue that it is hard to understand, and others argue that if
 				someone has immigrated, they may have less education, but neither of
@@ -624,7 +811,7 @@ const seo = {
 				think of corruption and dirt, because last week we saw a news piece on
 				CNN about the Indian government&rsquo;s faults. These images and
 				stereotypes paint severely different pictures of these two groups and
-				systemically hinder their chances for success.<br />
+				systemically hinder their chances for success.<br /><br />
 				 So, what does this tell us? The problem is not that someone speaks a
 				different language, or someone has a different accent. It is that
 				someone speaks a language or has an accent with which we do not feel
@@ -636,7 +823,9 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">testament by Meagan Tam</h1>
+			<h1 id="testament" class="text-4xl font-black py-6">
+				testament by Meagan Tam
+			</h1>
 			<p class="text-base">
 				I swear to God I&rsquo;ve always known. <br />
 				 Sun setting, clay setting into certainties, <br />
@@ -663,7 +852,7 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">
+			<h1 id="whiteman1" class="text-4xl font-black py-6">
 				The Daily Allowance Of White Men by Lee Chaloemtiarana
 			</h1>
 			<p class="text-base">
@@ -685,7 +874,7 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">
+			<h1 id="whiteman2" class="text-4xl font-black py-6">
 				the mysterious case of the white man by Lee Chaloemtiarana
 			</h1>
 			<p class="text-base">
@@ -712,13 +901,16 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">Untitled by Ema Edwards</h1>
-			<p>Photo to be inserted</p>
+			<h1 id="ema" class="text-4xl font-black py-6">Glazed by Ema Edwards</h1>
+
+			<Image src={ema} alt="" class="mx-auto pb-4 w-1/2" />
 
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">Dear Diary (anonymous)</h1>
+			<h1 id="anonymous" class="text-4xl font-black py-6">
+				Dear Diary (anonymous)
+			</h1>
 			<p class="text-base">
 				Dear diary, The sun&rsquo;s already up&mdash;when did it get so bright?<br
 				/>
@@ -787,7 +979,7 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">
+			<h1 id="protests" class="text-4xl font-black py-6">
 				premature protests by Lee Chaloemtiarana
 			</h1>
 			<p class="text-base">
@@ -814,7 +1006,9 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">Red-crowned crane by Audrey Tang</h1>
+			<h1 id="crane" class="text-4xl font-black py-6">
+				Red-crowned crane by Audrey Tang
+			</h1>
 			<p class="text-base">
 				Counterfeit cranes lie limp and folded.<br />
 				 Real ones sing and spread their wings.<br />
@@ -834,7 +1028,9 @@ const seo = {
 			<!-- Horizontal line -->
 			<hr class="my-8" />
 
-			<h1 class="text-4xl font-black py-6">Cantonese by Audrey Tang</h1>
+			<h1 id="cantoneese" class="text-4xl font-black py-6">
+				Cantonese by Audrey Tang
+			</h1>
 			<p class="text-base">
 				Loud, crass, lively, flip-flopping off the tongue. There are nine tones.
 				Nine subtle fluctuations of the tongue and the throat as the old women
@@ -843,17 +1039,17 @@ const seo = {
 				opposite of focus &mdash; I stop concentrating, I try to disassociate my
 				memory from my hearing &mdash; and for just one moment, the
 				women&rsquo;s voices sound like jabbering chaos. <br />
-
-				 Unlike Italian, Cantonese does not flow through the ears like water. Unlike
-				French, it does not soothe like aloe on sun-scarred skin. But the familiar
-				up-down-right-left bounce of the dialect makes me laugh. In no other language
-				will you find the casual, incomprehensible vulgarity with which we Hong Kongers
-				speak. <br />
-
+				<br />
+				 Unlike Italian, Cantonese does not flow through the ears like water.
+				Unlike French, it does not soothe like aloe on sun-scarred skin. But the
+				familiar up-down-right-left bounce of the dialect makes me laugh. In no
+				other language will you find the casual, incomprehensible vulgarity with
+				which we Hong Kongers speak. <br />
+				<br />
 				 But there is beauty in the words. Our names hold meaning and love. Mine
-				means blue sky. To be free like a bird in the blue skies. To remain sturdy
-				and unyielding like a pilot in the blue skies. To be joyful and cloudless
-				and forever full of sunlight in the blue skies.<br />
+				means blue sky. To be free like a bird in the blue skies. To remain
+				sturdy and unyielding like a pilot in the blue skies. To be joyful and
+				cloudless and forever full of sunlight in the blue skies.<br /><br />
 
 				 Talking in Cantonese is how you should sing, my vocal teacher sometimes
 				says. Always going, never stopping, sometimes boisterous, sometimes subdued,
@@ -861,7 +1057,7 @@ const seo = {
 				sounds, the words form steady rivulets, just like how a breath is constantly
 				sustained, how a soft palate is continuously lifted. There must be tension
 				between the palate and the back of the tongue. Just like in Cantonese. So,
-				Cantonese is singing.<br />
+				Cantonese is singing.<br /><br />
 
 				 Cantonese is when your father yells at the TV about the state of the economy.
 				Cantonese is your grandmother lecturing you over a round of mahjong and dinners.
@@ -869,7 +1065,7 @@ const seo = {
 				families. It is memorizing and reading the most heartrending poetry in classrooms
 				while your teacher teaches you about the romanticism of Li Bai or Du Mu.
 				It is also cursing with the filthiest words known to civilization in the
-				railway station while knowing nobody will bat an eye.<br />
+				railway station while knowing nobody will bat an eye.<br /><br />
 
 				 I latch onto Cantonese tightly during winters and summers.
 			</p>
